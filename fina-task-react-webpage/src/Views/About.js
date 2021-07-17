@@ -1,13 +1,11 @@
-import { useParams } from "react-router-dom";
 import Breadcrumbs from '../Components/Breadcrumbs';
 
 function About() {
     const bredcrumbPaths = [
         { link: '/', title: 'Home' },
-        { link: '/categories', title: 'Categories' },
-        // { link: `/categories/${category.id}`, title: category.title },
-        // { title: product.title },
-    ]
+        { title: 'About Us' },
+    ];
+
     return (
         <div className="container">
             <div className="row">

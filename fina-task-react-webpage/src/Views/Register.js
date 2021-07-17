@@ -1,11 +1,25 @@
+import Breadcrumbs from '../Components/Breadcrumbs';
 
+function Chat() {
+    const bredcrumbPaths = [
+        { link: '/', title: 'Home' },
+        { title: 'Register' },
+    ];
 
-function Register() {
     return (
-        <div>
-           
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <Breadcrumbs paths={bredcrumbPaths} />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col">
+                    <h4>Register</h4>
+                </div>
+            </div>
         </div>
     );
 }
 
-export default Register;
+export default Chat;

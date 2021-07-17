@@ -21,7 +21,7 @@ function Breadcrumbs({ paths }) {
 
     return (
         <nav aria-label="breadcrumb ">
-            <ol className="breadcrumb mt-3">
+            <ol className="breadcrumb mt-3 text-muted fw-lighter">
                 {links}
             </ol>
         </nav>
