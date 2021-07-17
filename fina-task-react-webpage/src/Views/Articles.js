@@ -1,6 +1,6 @@
 import Breadcrumbs from '../Components/Breadcrumbs';
-import { NavLink } from 'react-router-dom';
-import articles from '../Data/Articles';
+// import { NavLink } from 'react-router-dom';
+// import articles from '../Data/Articles';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Posts from '../Components/Posts';
@@ -15,7 +15,7 @@ function Articles() {
 useEffect(() => {
     const fetchPosts = async () => {
         setLoading(true);
-        const res = await axios.get('http://localhost:8081/tasks');
+        const res = await axios.get('http://localhost:8082/tasks');
         setPosts(res.data);
         setLoading(false);
     }
@@ -36,18 +36,18 @@ useEffect(() => {
         { title: 'Articles' },
     ];
 
-    const formatedArticles = articles.map((article, index) => {
-        return (
-            <div className="row">
-                <div className="col">
-                    {article.image}
-                </div>
-                <div className="col">
-                    {article.title}
-                </div>
-            </div>
-        )
-    })
+    // const formatedArticles = articles.map((article, index) => {
+    //     return (
+    //         <div className="row">
+    //             <div className="col">
+    //                 {article.image}
+    //             </div>
+    //             <div className="col">
+    //                 {article.title}
+    //             </div>
+    //         </div>
+    //     )
+    // })
 
     return (
         <div className="container">

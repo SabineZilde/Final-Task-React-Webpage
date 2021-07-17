@@ -6,13 +6,25 @@ const taskSchema = mongoose.Schema({
         type: String, 
         required: true,
     },
-    isCompleted: {
-        type: Boolean,
-        default: false,
+    image: {
+        type: String,
+        default: true,
     },
-    labels: {
-        type: Array,
-        default: [], // empty array aka no labels
+    shortText: {
+        type: String,
+        default: true, 
+    },
+    middleText: {
+        type: String,
+        default: true, 
+    },
+    longText: {
+        type: String,
+        default: true, 
+    },
+    slug: {
+        type: String,
+        default: true,
     },
     createdAt: {
         type: Date,
