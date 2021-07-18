@@ -36,19 +36,19 @@ useEffect(() => {
     ];
 
     return (
-        <div className="container">
-            <div className="row">
+        <div className="container-fluid" style={{backgroundColor: 'lightgrey'}}>
+            <div className="row mx-5">
                 <div className="col">
                     <Breadcrumbs paths={bredcrumbPaths} />
                 </div>
             </div>
-            <div className="row">
+            <div className="row mx-5">
                 <div className="col">
                     <h4>Articles</h4>
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col p-0">
                     <Posts posts={currentPosts} loading={loading} />
                     <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
                 </div>

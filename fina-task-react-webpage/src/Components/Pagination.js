@@ -8,7 +8,7 @@ function Pagination({ postsPerPage, totalPosts, paginate }) {
     };
 
     return (
-        <nav className="pagination">
+        <nav className="pagination mb-4 d-flex justify-content-center">
             {pageNumbers.map(number => (
                 <li key={number} className="page-item">
                     <NavLink onClick={() => paginate(number)} to="/articles" className="page-link">
