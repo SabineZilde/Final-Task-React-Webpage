@@ -11,11 +11,10 @@ function Posts({ posts, loading }) {
     return (
         <ul className="list-group mb-4">
             {posts.map(post => (
-                <li key={post.id} className="list-group-item">
+                <li key={post.id} className="list-group-item"> 
                     <div className="row">
-                        <div className="col">
+                        <div className="col-2">
                             <img src={post.image} alt="..." className="img-fluid"/>
-                            {post.image} 
                         </div>
                         <div className="col">
                             <h5>{post.title}</h5>

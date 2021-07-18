@@ -1,6 +1,5 @@
 import Breadcrumbs from '../Components/Breadcrumbs';
 // import { NavLink } from 'react-router-dom';
-// import articles from '../Data/Articles';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Posts from '../Components/Posts';
@@ -35,19 +34,6 @@ useEffect(() => {
         { link: '/', title: 'Home' },
         { title: 'Articles' },
     ];
-
-    // const formatedArticles = articles.map((article, index) => {
-    //     return (
-    //         <div className="row">
-    //             <div className="col">
-    //                 {article.image}
-    //             </div>
-    //             <div className="col">
-    //                 {article.title}
-    //             </div>
-    //         </div>
-    //     )
-    // })
 
     return (
         <div className="container">
