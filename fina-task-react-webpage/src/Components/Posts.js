@@ -1,41 +1,46 @@
+import { NavLink } from 'react-router-dom';
+
 function Posts({ posts, loading }) {
 
     if (loading) {
         return <h2>Loading...</h2>
     }
-    // const image = posts.map((post) => {
-    //     return `https://` + post.image
-    // })
-
 
     return (
-        <ul className="list-group mb-4">
+        <ul className="list-group mb-4 mt-3">
             {posts.map((post) => {
-                console.log(posts.indexOf(post))
-                return posts.indexOf(post) % 2 === 0 ? (<li key={post.id} className="list-group-item" style={{backgroundColor: 'darkorange'}}>
-                        <div className="row">
-                            <div className="col-2">
-                                <img src={post.image} alt="..." className="img-fluid" />
-                            </div>
-                            <div className="col">
-                                <h5>{post.title}</h5>
-                                <p>{post.middleText}</p>
-                            </div>
+                return posts.indexOf(post) % 2 === 0 ? (<li key={post.id} className="" style={{ backgroundColor: 'darkorange' }}>
+                    <div className="row">
+                        <div className="col-3">
+                            <NavLink to={'/articles/' + post.slug}>
+                                <img src={post.images.forArticles} alt="..." className="img-fluid" />
+                            </NavLink>
                         </div>
-                    </li>)
+                        <div className="col m-3 mt-4 pt-1">
+                            <NavLink to={'/articles/' + post.slug}>
+                                <h5>{post.title}</h5>
+                            </NavLink>
+                            <p>{post.middleText}</p>
+                        </div>
+                    </div>
+                </li>)
                     :
-                    (<li key={post.id} className="list-group-item" style={{backgroundColor: 'lightgrey'}}>
+                    (<li key={post.id} className="" style={{ backgroundColor: 'skyblue' }}>
                         <div className="row">
-                            <div className="col-2">
-                                <img src={post.image} alt="..." className="img-fluid" />
-                            </div>
-                            <div className="col">
-                                <h5>{post.title}</h5>
+                            <div className="col m-3 mt-4 ps-5 pt-1">
+                                <NavLink to={'/articles/' + post.slug}>
+                                    <h5>{post.title}</h5>
+                                </NavLink>
                                 <p>{post.middleText}</p>
+                            </div>
+                            <div className="col-3">
+                                <NavLink to={'/articles/' + post.slug}>
+                                    <img src={post.images.forArticles} alt="..." className="img-fluid" />
+                                </NavLink>
                             </div>
                         </div>
                     </li>)
-                }
+            }
             )
             }
         </ul>

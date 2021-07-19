@@ -1,5 +1,4 @@
 import Breadcrumbs from '../Components/Breadcrumbs';
-// import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Posts from '../Components/Posts';

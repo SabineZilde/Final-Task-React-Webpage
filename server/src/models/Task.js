@@ -6,9 +6,15 @@ const taskSchema = mongoose.Schema({
         type: String, 
         required: true,
     },
-    image: {
-        type: String,
-        default: true,
+    images: {
+        small: {
+            type: String,
+            default: true,
+        },
+        forArticles: {
+            ype: String,
+            default: [],
+        },
     },
     shortText: {
         type: String,

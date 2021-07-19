@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Views/Home';
 import Articles from './Views/Articles';
+import Article from './Views/Article';
 import Chat from './Views/Chat';
 import Register from './Views/Register';
 import About from './Views/About';
@@ -17,8 +18,11 @@ function App() {
                     <Route exact path="/">
                         <Home />
                     </Route>
-                    <Route path="/articles">
+                    <Route exact path="/articles">
                         <Articles />
+                    </Route>
+                    <Route path="/articles/:articleSlug">
+                        <Article />
                     </Route>
                     <Route path="/chat">
                         <Chat />
