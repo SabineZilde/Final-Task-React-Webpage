@@ -2,6 +2,7 @@ import Breadcrumbs from '../Components/Breadcrumbs';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { SRLWrapper } from "simple-react-lightbox";
 
 function Article() {
     const { articleSlug } = useParams();
@@ -27,7 +28,9 @@ function Article() {
         return i.images.forGallery.map((j, index) => {
             return (
                 <div className="col-4 mt-3 px-2" key={index}>
-                    <img src={j} className="img-fluid" alt="..." onMouseOver={() => setLargeImage(j)} />
+                    <a href={j}>
+                        <img src={j} className="img-fluid" alt="..." onMouseOver={() => setLargeImage(j)} />
+                    </a>
                 </div>
             )
         })
@@ -77,14 +80,19 @@ function Article() {
             </div>
 
             <div className="row mx-5">
+
                 <div className="col-4 mb-5">
                     <img src={largeImage} className="img-fluid" alt="..." />
-                    <div className="row px-1">
-                        {images}
-                    </div>
+                    <SRLWrapper>
+                        <div className="row px-1">
+                            {images}
+                        </div>
+                    </SRLWrapper>
                 </div>
+
                 <div className="col mb-5">
                     <h4>{bredcrumbTitle}</h4>
+                    <p>{paragraph}</p>
                     <p>{paragraph}</p>
                 </div>
             </div>
