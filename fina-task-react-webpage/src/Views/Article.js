@@ -7,7 +7,6 @@ function Article() {
     const { articleSlug } = useParams();
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [largeImage, setLargeImage] = useState();
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -23,6 +22,31 @@ function Article() {
     const filteredPage = posts.filter((post) => {
         return articleSlug === post.slug
     });
+
+    const images = filteredPage.map((i) => {
+        return i.images.forGallery.map((j, index) => {
+            return (
+                <div className="col-4 mt-3 px-2" key={index}>
+                    <img src={j} className="img-fluid" alt="..." onMouseOver={() => setLargeImage(j)} />
+                </div>
+            )
+        })
+    });
+
+    const imageArray = filteredPage.map((i) => {
+        return i.images.forGallery[0]
+    })
+
+    const xlImage = imageArray[0];
+
+    console.log(xlImage)
+
+    const [largeImage, setLargeImage] = useState(xlImage);
+
+
+    const paragraph = filteredPage.map((property) => {
+        return property.longText
+    })
 
     const bredcrumbTitle = filteredPage.map((property) => {
         return property.title
@@ -52,7 +76,21 @@ function Article() {
                 </div>
             </div>
 
-            {filteredPage.map((element) => {
+            <div className="row mx-5">
+                <div className="col-4 mb-5">
+                    <img src={largeImage} className="img-fluid" alt="..." />
+                    <div className="row px-1">
+                        {images}
+                    </div>
+                </div>
+                <div className="col mb-5">
+                    <h4>{bredcrumbTitle}</h4>
+                    <p>{paragraph}</p>
+                </div>
+            </div>
+
+
+            {/* {filteredPage.map((element) => {
                 return (
                     <div className="row mx-5">
                         <div className="col-4 mb-5">
@@ -74,7 +112,7 @@ function Article() {
                     </div>
 
                 )
-            })}
+            })} */}
         </div>
     )
 }
