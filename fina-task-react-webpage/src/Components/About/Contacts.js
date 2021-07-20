@@ -19,11 +19,11 @@ function Contacts() {
             </div>
         </div>
         <div className="col">
-            <h6>Address</h6>
+            <h5><b>Address</b></h5>
             <p>Kalnciema street 186, Marupe district, LV-2167, Latvia</p>
-            <h6>E-mail</h6>
+            <h5><b>E-mail</b></h5>
             <p><a href="mailto:info@greatart.lv">info@greatart.lv</a></p>
-            <h6>Phone</h6>
+            <h5><b>Phone</b></h5>
             <p>+371 29234567</p>
         </div>
     </div>

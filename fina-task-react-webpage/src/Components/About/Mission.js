@@ -3,7 +3,7 @@ function Mission() {
         <div className="row">
             <div className="col">
                 <img src="https://www.galeriemagazine.com/wp-content/uploads/2019/02/CCM-MoMA-Making-Space-1920x1200.jpg"
-                    className="float-sm-start mb-1 me-3 rounded-1" alt="MoMA Making Space" height="200px" />
+                    className="float-sm-start mb-1 me-5 rounded-1" alt="MoMA Making Space" height="200px" />
 
                 <h4>MoMA Mission statement</h4>
                 <p>Founded in 1929 as an educational institution, The Museum of Modern Art is dedicated to

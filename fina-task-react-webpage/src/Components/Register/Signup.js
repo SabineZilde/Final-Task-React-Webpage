@@ -67,6 +67,40 @@ function Signup({ submitForm }) {
                     />
                     {errors.password2 && <p>{errors.password2}</p>}
                 </div>
+                <div className="form-inputs">
+                    <label className="form-label">
+                    </label>
+                    <select
+                        name="country"
+                        className="form-input"
+                        onChange={handleChange}>
+                        <option selected disabled value="">Country</option>
+                        <option value="LV">Latvia</option>
+                        <option value="LT">Lithuania</option>
+                        <option value="EE">Estonia</option>
+                        <option value="NO">Norway</option>
+                        <option value="SE">Sweden</option>
+                        <option value="FI">Finland</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="DK">Denmark</option>
+                        <option value="DE">Germany</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    {errors.country && <p>{errors.country}</p>}
+                </div>
+                <div className="form-check">
+                    <input
+                        type="checkbox"
+                        name="agree"
+                        className="form-check-input"
+                        value={values.agree}
+                        onChange={handleChange}
+                    />
+                    <label className="form-label">
+                        &nbsp; Agree with terms and condition
+                    </label>
+                    {errors.agree && <p className="form-agree">{errors.agree}</p>}
+                </div>
                 <button className="form-input-btn btn btn-warning" type="submit">
                     Sign up
                 </button>

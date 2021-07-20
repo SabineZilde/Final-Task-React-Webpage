@@ -18,18 +18,18 @@ function Register() {
     ];
 
     return (
-        <div className="container-fluid" style={{ backgroundColor: 'lightgrey' }}>
-            <div className="row">
+        <div className="container-fluid pb-5" style={{ backgroundColor: 'lightgrey' }}>
+            <div className="row mx-5">
                 <div className="col">
                     <Breadcrumbs paths={bredcrumbPaths} />
                 </div>
             </div>
-            <div className="row">
+            <div className="row mx-5">
                 <div className="col">
                     <h4>Register</h4>
                 </div>
             </div>
-            <div className="row">
+            <div className="row mt-3 mb-5">
                 <div className="col p-0">
                     <div className="form-container">
                         <div className="form-content-left">

@@ -3,7 +3,7 @@ function History() {
         <div className="row">
             <div className="col">
                 <img src="https://assets.moma.org/d/p/sa/momaps1_history_tile.jpg"
-                    class="float-sm-start mb-1 me-3 rounded-1" alt="MoMA History Tile" height="200px" />
+                    className="float-sm-start mb-4 me-5 rounded-1" alt="MoMA History Tile" height="200px" />
                 <h4>MoMA history</h4>
                 <p>
                     MoMA PS1, one of the oldest and largest nonprofit contemporary art institutions in the

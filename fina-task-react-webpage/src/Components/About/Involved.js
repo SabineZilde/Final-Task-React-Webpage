@@ -3,7 +3,7 @@ function Involved() {
         <div className="row">
             <div className="col">
                 <img src="https://www.moma.org/d/p/sa/CT_KALINA_NEWMOMA_006.jpg"
-                    class="float-sm-start mb-1 me-3 rounded-1" alt="Get Invovled" height="200px" />
+                    className="float-sm-start mb-5 me-5 rounded-1" alt="Get Invovled" height="200px" />
                 <h4>Get invovled</h4>
                 <p>Bringing diverse communities closer to art and exposing audiences to new ideas is exciting
                     and inspiring work, and we are always looking for dedicated and creative staff, interns, and

@@ -22,6 +22,14 @@ function validateInfo(values) {
     } else if (values.password2 !== values.password) {
         errors.password2 = 'Passwords do not match'
     }
+
+    if(!values.country) {
+        errors.country = 'Country required'
+    }
+
+    if(!values.agree) {
+        errors.agree = 'You must agree before submitting'
+    }
     return errors;
 
 }
