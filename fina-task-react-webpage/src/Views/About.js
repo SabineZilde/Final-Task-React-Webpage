@@ -3,6 +3,7 @@ import Breadcrumbs from '../Components/Breadcrumbs';
 import Mission from '../Components/About/Mission';
 import History from '../Components/About/History';
 import Involved from '../Components/About/Involved';
+import Contacts from '../Components/About/Contacts';
 
 
 function About() {
@@ -23,7 +24,7 @@ function About() {
     }
 
     return (
-        <div className="container-fluid">
+        <div className="container-fluid" style={{backgroundColor: 'lightgrey'}}>
             <div className="row mx-5">
                 <div className="col">
                     <Breadcrumbs paths={bredcrumbPaths} />
@@ -34,7 +35,7 @@ function About() {
                     <h4>About Us</h4>
                 </div>
             </div>
-            <div className="row mx-5">
+            <div className="row px-5 mt-3" style={{backgroundColor: 'darkorange '}}>
                 <div className="col my-5">
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
@@ -49,6 +50,12 @@ function About() {
                     </ul>
                     <div className="my-5">{tabContent}</div>
                     
+                </div>
+            </div>
+            <div className="row mx-5 mt-4">
+                <div className="col">
+                    <h4>Contacts</h4>
+                    <Contacts />
                 </div>
             </div>
         </div>

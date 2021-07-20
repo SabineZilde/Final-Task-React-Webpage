@@ -7,7 +7,7 @@ function Chat() {
     ];
 
     return (
-        <div className="container">
+        <div className="container-fluid" style={{backgroundColor: 'lightgrey'}}>
             <div className="row">
                 <div className="col">
                     <Breadcrumbs paths={bredcrumbPaths} />
