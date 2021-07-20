@@ -7,3 +7,27 @@
   padding: 0;
   font-family: 'PT Sans', sans-serif;
 }
+
+.bkg-gradient-blue {
+    background: linear-gradient( 90deg, rgb(39, 176, 255) 0%, rgb(0, 232, 236) 100%)
+}
+
+.bkg-gradient-orange {
+    background: linear-gradient( 90deg, rgb(252,230,52) 0%, rgb(242,101,34) 100%)
+}
+
+.bkg-gradient-dark {
+    background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
+}
+
+.nav-tabs {
+    border-bottom: 1px solid rgba(242, 100, 34, 0.185) !important;
+}
+
+.nav-link.active {
+    border-color: rgba(242, 100, 34, 0.185) rgba(242, 100, 34, 0.185) #fff!important;
+}
+
+.tabs-border {
+    border-radius: 5px !important;
+}

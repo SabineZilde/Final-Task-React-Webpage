@@ -1,7 +1,11 @@
 .nav-link:hover {
-    color: rgb(252, 206, 54) !important
+    color: rgb(252,230,52) !important
 }
 
 .nav-link:focus {
-    color: rgb(252, 107, 54) !important
+    color: rgb(242,101,34) !important
+}
+
+.bg-dark {
+    background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%);
 }

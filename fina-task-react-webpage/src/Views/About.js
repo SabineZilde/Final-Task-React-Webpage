@@ -4,7 +4,7 @@ import Mission from '../Components/About/Mission';
 import History from '../Components/About/History';
 import Involved from '../Components/About/Involved';
 import Contacts from '../Components/About/Contacts';
-
+import '../App.css';
 
 function About() {
     const [activeTab, setActiveTab] = useState('mission');
@@ -35,20 +35,20 @@ function About() {
                     <h4>About Us</h4>
                 </div>
             </div>
-            <div className="row px-5 mt-3" style={{backgroundColor: 'darkorange '}}>
-                <div className="col my-5">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <button class={'nav-link' + (activeTab === 'mission' ? ' active' : '')} onClick={() => setActiveTab('mission')}>Mission statement</button>
+            <div className="row px-5 mt-3 bkg-gradient-orange">
+                <div className="col my-5 p-0" style={{backgroundColor: 'white', borderRadius: '5px 5px'}}>
+                    <ul className="nav nav-tabs px-5 pt-3 tabs-border"  style={{backgroundColor: 'ivory'}}>
+                        <li className="nav-item">
+                            <button className={'nav-link' + (activeTab === 'mission' ? ' active' : '')} onClick={() => setActiveTab('mission')}>Mission statement</button>
                         </li>
                         <li class="nav-item">
-                            <button class={'nav-link' + (activeTab === 'history' ? ' active' : '')} onClick={() => setActiveTab('history')}>MoMa history</button>
+                            <button className={'nav-link' + (activeTab === 'history' ? ' active' : '')} onClick={() => setActiveTab('history')}>MoMa history</button>
                         </li>
                         <li class="nav-item">
-                            <button class={'nav-link' + (activeTab === 'involved' ? ' active' : '')} onClick={() => setActiveTab('involved')}>Get involved</button>
+                            <button className={'nav-link' + (activeTab === 'involved' ? ' active' : '')} onClick={() => setActiveTab('involved')}>Get involved</button>
                         </li>
                     </ul>
-                    <div className="my-5">{tabContent}</div>
+                    <div className="my-5 px-5">{tabContent}</div>
                     
                 </div>
             </div>

@@ -5,6 +5,7 @@ import Articles from './Views/Articles';
 import Article from './Views/Article';
 import Chat from './Views/Chat';
 import Register from './Views/Register';
+import Login from './Views/Login';
 import About from './Views/About';
 
 import Header from './Components/Header';
@@ -30,6 +31,9 @@ function App() {
                     </Route>
                     <Route path="/register">
                         <Register />
+                    </Route>
+                    <Route path="/login">
+                        <Login />
                     </Route>
                     <Route path="/about">
                         <About />

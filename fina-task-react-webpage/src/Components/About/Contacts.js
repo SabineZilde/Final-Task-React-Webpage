@@ -1,7 +1,7 @@
 function Contacts() {
     return (
     
-    <div className="row mb-5 mt-4 ">
+    <div className="row mb-5 mt-4">
         <div className="col">
             <div>
                 <iframe width="500" height="400" frameborder="0" title="map"

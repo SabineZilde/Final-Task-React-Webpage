@@ -1,3 +1,5 @@
+import '../../Assets/CSS/Register.css';
+
 function Success() {
     return (
         <div className="form-content-right">

@@ -10,7 +10,7 @@ function Home() {
     const articleCards = mostRecentArticles.map((article, index) => {
         return (
             <div className="col" key={index}>
-                <div className="card mb-3" style={{ backgroundColor: '' }}>
+                <div className="card mb-3" style={{ backgroundColor: 'ivory' }}>
                     <div className="row g-0">
                         <div className="col-md-4">
                             <img src={article.image} className="img-fluid rounded-start" alt="..." />
