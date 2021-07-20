@@ -24,6 +24,14 @@ function Article() {
         return articleSlug === post.slug
     });
 
+    const imageArray = filteredPage.map((i) => {
+        return i.images.forGallery[0]
+    })
+
+    const [largeImage, setLargeImage] = useState(imageArray[0]);
+
+    console.log(imageArray[0])
+
     const images = filteredPage.map((i) => {
         return i.images.forGallery.map((j, index) => {
             return (
@@ -36,24 +44,13 @@ function Article() {
         })
     });
 
-    const imageArray = filteredPage.map((i) => {
-        return i.images.forGallery[0]
-    })
-
-    const xlImage = imageArray[0];
-
-    console.log(xlImage)
-
-    const [largeImage, setLargeImage] = useState(xlImage);
-
-
     const paragraph = filteredPage.map((property) => {
         return property.longText
-    })
+    });
 
     const bredcrumbTitle = filteredPage.map((property) => {
         return property.title
-    })
+    });
 
     const bredcrumbPaths = [
         { link: '/', title: 'Home' },
@@ -64,7 +61,7 @@ function Article() {
 
     if (loading) {
         return <h2>Loading...</h2>
-    }
+    };
 
     return (
         <div className="container-fluid" style={{ backgroundColor: 'lightgrey' }}>
@@ -82,7 +79,7 @@ function Article() {
             <div className="row mx-5">
 
                 <div className="col-4 mb-5">
-                    <img src={largeImage} className="img-fluid" alt="..." />
+                    <img src={largeImage} className="img-fluid" alt=" Loading..." />
                     <SRLWrapper>
                         <div className="row px-1">
                             {images}
