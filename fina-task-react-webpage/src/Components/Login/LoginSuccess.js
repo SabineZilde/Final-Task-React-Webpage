@@ -5,7 +5,7 @@ function LoginSuccess() {
     return (
         <div className="form-content-right">
             <div className="form-success">
-                Welcome back friend!
+                Hello, friend!
                 {/* <Username usernameForSuccess={usernameForSuccess} /> */}
             </div>
             {/* <img src="https://image.flaticon.com/icons/png/512/1646/1646832.png" alt="success" className="form-img-2" /> */}

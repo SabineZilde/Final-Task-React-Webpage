@@ -1,0 +1,10 @@
+.warning {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #f00e0e;
+}
+
+.form-control::placeholder {
+    color: #595959;
+    font-size: 12px;
+}

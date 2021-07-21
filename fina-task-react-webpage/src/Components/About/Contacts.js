@@ -25,6 +25,8 @@ function Contacts() {
             <p><a href="mailto:info@greatart.lv">info@greatart.lv</a></p>
             <h5><b>Phone</b></h5>
             <p>+371 29234567</p>
+            <h5><b>Social Networks</b></h5>
+        
         </div>
     </div>
     )

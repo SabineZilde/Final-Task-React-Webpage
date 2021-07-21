@@ -14,7 +14,7 @@ function Header() {
                     <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li><NavLink exact to="/" className="nav-link px-2 text-white">Home</NavLink></li>
                         <li><NavLink to="/articles" className="nav-link px-2 text-white">Articles</NavLink></li>
-                        <li><NavLink to="/chat" className="nav-link px-2 text-white">Chat</NavLink></li>
+                        <li><NavLink to="/comments" className="nav-link px-2 text-white">Comments</NavLink></li>
                         <li><NavLink to="/about" className="nav-link px-2 text-white">About Us</NavLink></li>
                     </ul>
 

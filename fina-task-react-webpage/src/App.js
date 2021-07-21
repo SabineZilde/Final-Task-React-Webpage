@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Views/Home';
 import Articles from './Views/Articles';
 import Article from './Views/Article';
-import Chat from './Views/Chat';
+import Comments from './Views/Comments';
 import Register from './Views/Register';
 import Login from './Views/Login';
 import About from './Views/About';
@@ -26,8 +26,8 @@ function App() {
                     <Route path="/articles/:articleSlug">
                         <Article />
                     </Route>
-                    <Route path="/chat">
-                        <Chat />
+                    <Route path="/comments">
+                        <Comments />
                     </Route>
                     <Route path="/register">
                         <Register />

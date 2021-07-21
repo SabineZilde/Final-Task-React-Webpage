@@ -1,7 +1,6 @@
 import '../../Assets/CSS/Register.css';
 
-function Success({value}) {
-    console.log(value.username)
+function Success() {
     return (
         <div className="form-content-right">
             <div className="form-success">
