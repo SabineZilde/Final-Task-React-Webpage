@@ -1,7 +1,17 @@
-import Breadcrumbs from '../Components/Breadcrumbs';
+import Log from '../Components/Login/Log';
+import LoginSuccess from '../Components/Login/LoginSuccess';
+import { useState } from 'react';
+import '../Assets/CSS/Register.css';
 import logo from '../Assets/Img/Fox-Logo.png';
+import Breadcrumbs from '../Components/Breadcrumbs';
 
 function Login() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    function submitForm() {
+        setIsSubmitted(true)
+    };
+
     const bredcrumbPaths = [
         { link: '/', title: 'Home' },
         { title: 'Login' },
@@ -25,7 +35,7 @@ function Login() {
                         <div className="form-content-left">
                             <img src={logo} alt="Fox logo" className="form-img" />
                         </div>
-                        {/* {!isSubmitted ? (<Signup submitForm={submitForm} />) : (<Success />)} */}
+                        {!isSubmitted ? (<Log submitForm={submitForm} />) : (<LoginSuccess />)}
                     </div>
                 </div>
             </div>
