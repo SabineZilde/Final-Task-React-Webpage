@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import taskRoutes from './routes/tasks.js';
+import commentRoutes from './routes/comments.js';
 import cors from 'cors';
 
 dotenv.config();
@@ -13,6 +14,7 @@ server.use(cors());
 server.use(bodyParser.json());
 
 server.use('/tasks', taskRoutes);
+server.use('/comments', commentRoutes);
 
 mongoose.connect(
     process.env.MONGOOSE_CONNECTION_URL, 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import '../../Assets/CSS/Comments.css';
+import Axios from 'axios';
 
 function NewCommentForm() {
     const [saving, setSaving] = useState(false);
@@ -22,12 +23,24 @@ function NewCommentForm() {
         }
         setSaving(true);
 
-        setTimeout(() => {
-            setSaving(false);
-            setNewUsername('');
-            setNewMessage('');
-        }, 2000);
-    }
+        const url = 'http://localhost:8082/comments';
+        const data = {
+            username: newUsername,
+            comment: newMessage,
+        };
+
+        Axios
+            .post(url, data)
+            .then(() => {
+                setSaving(false);
+                setNewUsername('');
+                setNewMessage('');
+            })
+            .catch(() => {
+                alert('Somethig went wrong when talikng to the server')
+                setSaving(false);
+            });
+    };
 
     let usernameInputField = <input type="text" value={newUsername} className="form-control" onChange={updateUsername} placeholder="Enter your username" />
     let messageInputField = <textarea className="form-control" value={newMessage} onChange={updateNewMessage} placeholder="Enter your message" />
