@@ -1,4 +1,5 @@
 import Breadcrumbs from '../Components/Breadcrumbs';
+import CommentsList from '../Components/Comments/CommentsList';
 import NewCommentForm from '../Components/Comments/NewCommentForm';
 
 function Comments() {
@@ -23,11 +24,7 @@ function Comments() {
                 <div className="col-8 my-5 offset-2" style={{ backgroundColor: 'white', borderRadius: '5px 5px' }}>
                     <div className="row p-3">
                         <div className="col">
-                            <ul className="list-group">
-                                <li className="list-group-item">
-                                Here will go the user input
-                                </li>
-                            </ul>
+                            <CommentsList />
                         </div>
                     </div>
                     

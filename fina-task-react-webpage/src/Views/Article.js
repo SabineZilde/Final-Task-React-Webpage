@@ -75,9 +75,7 @@ function Article() {
                     <h4>Article</h4>
                 </div>
             </div>
-
             <div className="row mx-5">
-
                 <div className="col-4 mb-5">
                     <img src={largeImage} className="img-fluid" alt=" Loading..." />
                     <SRLWrapper>
@@ -93,31 +91,6 @@ function Article() {
                     <p>{paragraph}</p>
                 </div>
             </div>
-
-
-            {/* {filteredPage.map((element) => {
-                return (
-                    <div className="row mx-5">
-                        <div className="col-4 mb-5">
-                            <img src={element.images.forArticles} className="img-fluid" alt="..." />
-                            <div className="row px-1">
-                                {element.images.forGallery.map((image) => {
-                                    return (
-                                        <div className="col-4 mt-3 px-2">
-                                            <img src={image} className="img-fluid" alt="..." />
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                        <div className="col mb-5">
-                            <h4>{element.title}</h4>
-                            <p>{element.longText}</p>
-                        </div>
-                    </div>
-
-                )
-            })} */}
         </div>
     )
 }

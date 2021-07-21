@@ -21,14 +21,30 @@ function NewCommentForm() {
             setMessageWarning('');
         }
         setSaving(true);
+
+        setTimeout(() => {
+            setSaving(false);
+            setNewUsername('');
+            setNewMessage('');
+        }, 2000);
     }
 
     let usernameInputField = <input type="text" value={newUsername} className="form-control" onChange={updateUsername} placeholder="Enter your username" />
     let messageInputField = <textarea className="form-control" value={newMessage} onChange={updateNewMessage} placeholder="Enter your message" />
+    let submitBtn = (
+        <button className="btn btn-warning mt-3 form-control" onClick={createNewComment}>
+            Post
+        </button>
+    )
 
     if (saving) {
         usernameInputField = <input disabled={true} type="text" value={newUsername} className="form-control" onChange={updateUsername} placeholder="Enter your username" />
         messageInputField = <textarea disabled={true} className="form-control" value={newMessage} onChange={updateNewMessage} placeholder="Enter your message" />
+        submitBtn = (
+            <button disabled={true} className="btn btn-warning mt-3 form-control disabled" onClick={createNewComment}>
+                Saving...
+            </button>
+        )
     }
 
     return (
@@ -52,7 +68,7 @@ function NewCommentForm() {
                     <div>
                         {messageInputField}
                         {messageWarning}
-                        <button className="btn btn-warning mt-3 form-control" onClick={createNewComment}>Post</button>
+                        {submitBtn}
                     </div>
                 </div>
             </div>

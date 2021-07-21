@@ -1,8 +1,28 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../Assets/Img/Fox-Logo.png';
 import '../Assets/CSS/Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { useMediaQuery } from 'react-responsive';
 
 function Header() {
+    const isTabletOrMobile = useMediaQuery({ query: `(max-width: 991px)` });
+
+    let icons = (
+        <div>
+            <a className="icon" href="https://www.github.com"><FontAwesomeIcon icon={faGithub} /></a>&nbsp;&nbsp;
+            <a className="icon" href="https://www.github.com"><FontAwesomeIcon icon={faTwitter} /></a>&nbsp;&nbsp;
+            <a className="icon" href="https://www.github.com"><FontAwesomeIcon icon={faInstagram} /></a>&nbsp;&nbsp;
+            <a className="icon" href="https://www.github.com"><FontAwesomeIcon icon={faLinkedinIn} /></a>&nbsp;&nbsp;
+        </div>
+    )
+    
+    if (isTabletOrMobile) {
+        icons = (
+            <div></div>
+        )
+        
+    }
 
     return (
         <header className="p-3 bg-dark text-white">
@@ -17,7 +37,7 @@ function Header() {
                         <li><NavLink to="/comments" className="nav-link px-2 text-white">Comments</NavLink></li>
                         <li><NavLink to="/about" className="nav-link px-2 text-white">About Us</NavLink></li>
                     </ul>
-
+                    {icons}
                     <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                         <input type="search" className="form-control form-control-dark" placeholder="Search..." aria-label="Search" />
                     </form>

@@ -31,3 +31,11 @@
 .tabs-border {
     border-radius: 5px !important;
 }
+
+.icon {
+    color: gray;
+}
+
+.icon:hover {
+    color: rgb(252,230,52);
+}
