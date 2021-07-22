@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Comment from './Comment';
 
-function CommentsList({ counter, reloadCounter }) {
+function CommentsList({ counter, reloadCommentsList }) {
     const [comments, setComments] = useState({
         loading: true,
         items: [],
@@ -38,7 +38,7 @@ function CommentsList({ counter, reloadCounter }) {
         content = <h5>No comments added yet</h5>
     } else if (!comments.loading) {
         const commentElements = comments.items.map(( comment, index) => {
-            return <Comment comment={comment} key={index} reloadCounter={reloadCounter} />
+            return <Comment comment={comment} key={index} reloadCommentsList={reloadCommentsList} />
         });
 
         content = (

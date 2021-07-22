@@ -5,8 +5,7 @@ import axios from 'axios';
 
 function Comment({ comment, reloadCommentsList }) {
     const [deletingComment, setDeletingComment] = useState(false);
-
-
+    
     const deleteComment = async () => {
         setDeletingComment(true);
         const url = `http://localhost:8082/comments/${comment._id}`;
