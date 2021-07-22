@@ -3,7 +3,7 @@ import '../../Assets/CSS/Register.css';
 function LoginSuccess() {
     return (
         <div className="form-content-right">
-            <div className="form-success">
+            <div className="form-login-success">
                 Hello, friend!
             </div>
         </div>

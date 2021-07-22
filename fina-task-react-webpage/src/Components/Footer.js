@@ -6,7 +6,7 @@ function Footer() {
             <div className="row">
                 <div className="col-12 col-md">
                     <img className="mb-2" src="https://www.pinclipart.com/picdir/big/580-5808922_fmes-fox-logo-transparent-fox-logo-png-clipart.png" alt="small fox logo" width="24" />
-                    <small className="d-block mb-3 text-muted">© 2017–2021</small>
+                    <small className="d-block mb-3 text-muted">© 2021 Fox Club, Inc.</small>
                 </div>
                 <div className="col">
                     <h5>Features</h5>
