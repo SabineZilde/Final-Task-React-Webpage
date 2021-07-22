@@ -15,14 +15,18 @@ function Header() {
             <a className="icon" href="https://www.github.com"><FontAwesomeIcon icon={faInstagram} /></a>&nbsp;&nbsp;
             <a className="icon" href="https://www.github.com"><FontAwesomeIcon icon={faLinkedinIn} /></a>&nbsp;&nbsp;
         </div>
-    )
-    
+    );
+
+    let search = (
+        <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" className="form-control form-control-dark" placeholder="Search..." aria-label="Search" />
+        </form>
+    );
+
     if (isTabletOrMobile) {
-        icons = (
-            <div></div>
-        )
-        
-    }
+        icons = <div></div>;
+        search = <div></div>;
+    };
 
     return (
         <header className="p-3 bg-dark text-white">
@@ -38,10 +42,7 @@ function Header() {
                         <li><NavLink to="/about" className="nav-link px-2 text-white">About Us</NavLink></li>
                     </ul>
                     {icons}
-                    <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <input type="search" className="form-control form-control-dark" placeholder="Search..." aria-label="Search" />
-                    </form>
-
+                    {search}
                     <div className="text-end">
                         <NavLink to="/login">
                             <button type="button" className="btn btn-outline-light me-2">Login</button>

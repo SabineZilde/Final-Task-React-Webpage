@@ -1,9 +1,19 @@
+import { useMediaQuery } from 'react-responsive';
+
 function Involved() {
+    const isTabletOrMobile = useMediaQuery({ query: `(max-width: 700px)` });
+
+    let img = <img src="https://www.moma.org/d/p/sa/CT_KALINA_NEWMOMA_006.jpg"
+    className="float-sm-start mb-5 me-5 rounded-1" alt="Get Invovled" height="200px" />;
+
+    if (isTabletOrMobile) {
+        img = <img src="https://www.moma.org/d/p/sa/CT_KALINA_NEWMOMA_006.jpg"
+        className="float-sm-start mb-5 me-5 rounded-1 img-fluid" alt="Get Invovled" />;
+    };
     return (
         <div className="row">
             <div className="col">
-                <img src="https://www.moma.org/d/p/sa/CT_KALINA_NEWMOMA_006.jpg"
-                    className="float-sm-start mb-5 me-5 rounded-1" alt="Get Invovled" height="200px" />
+                {img}
                 <h4>Get invovled</h4>
                 <p>Bringing diverse communities closer to art and exposing audiences to new ideas is exciting
                     and inspiring work, and we are always looking for dedicated and creative staff, interns, and

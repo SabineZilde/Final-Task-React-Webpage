@@ -1,9 +1,19 @@
+import { useMediaQuery } from 'react-responsive';
+
 function History() {
+    const isTabletOrMobile = useMediaQuery({ query: `(max-width: 700px)` });
+
+    let img = <img src="https://assets.moma.org/d/p/sa/momaps1_history_tile.jpg"
+    className="float-sm-start mb-4 me-5 rounded-1" alt="MoMA History Tile" height="200px" />;
+
+    if (isTabletOrMobile) {
+        img = <img src="https://assets.moma.org/d/p/sa/momaps1_history_tile.jpg"
+        className="float-sm-start mb-4 me-5 rounded-1 img-fluid" alt="MoMA History Tile" />;
+    };
     return (
         <div className="row">
             <div className="col">
-                <img src="https://assets.moma.org/d/p/sa/momaps1_history_tile.jpg"
-                    className="float-sm-start mb-4 me-5 rounded-1" alt="MoMA History Tile" height="200px" />
+                {img}
                 <h4>MoMA history</h4>
                 <p>
                     MoMA PS1, one of the oldest and largest nonprofit contemporary art institutions in the
