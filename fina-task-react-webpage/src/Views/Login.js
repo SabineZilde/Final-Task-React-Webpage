@@ -5,9 +5,8 @@ import '../Assets/CSS/Register.css';
 import logo from '../Assets/Img/Fox-Logo.png';
 import Breadcrumbs from '../Components/Breadcrumbs';
 
-function Login() {
+function Login({ username }) {
     const [isSubmitted, setIsSubmitted] = useState(false);
-
     function submitForm() {
         setIsSubmitted(true)
     };

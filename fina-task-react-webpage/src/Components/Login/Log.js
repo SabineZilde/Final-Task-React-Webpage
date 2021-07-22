@@ -2,11 +2,11 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import LogForm from '../Login/LogForm';
 import LogValid from './LogValid';
+
 import '../../Assets/CSS/Register.css';
 
 function Log({ submitForm }) {
     const { handleChange, handleSubmit, values, errors } = LogForm(submitForm, LogValid);
-
 
     return (
         <div className="form-content-right">

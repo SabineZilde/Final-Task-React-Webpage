@@ -5,6 +5,7 @@ const LogForm = (callback, validate) => {
         username: '',
         password: '',
     });
+
     const [errors, setErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
 

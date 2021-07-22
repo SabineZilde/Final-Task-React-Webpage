@@ -8,7 +8,7 @@ function Contacts() {
                 <div className="col">
                     <div style={{ overflow: 'hidden', maxWidth: '100%', width: '500px', height: '500px' }}>
                         <div id="embedmap-canvas" style={{ height: '100%', width: '100%', maxWidth: '100%' }}>
-                            <iframe style={{ height: '100%', width: '100%', border: '0' }} frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=kalnciema+186+riga&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                            <iframe title="map" style={{ height: '100%', width: '100%', border: '0' }} frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=kalnciema+186+riga&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
                             </iframe>
                         </div>
                         <a className="codefor-googlemap" href="https://www.embed-map.com" id="grab-mapdata">
