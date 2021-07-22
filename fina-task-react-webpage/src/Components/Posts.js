@@ -19,7 +19,7 @@ function Posts({ posts, loading }) {
                         </div>
                         <div className="col m-3 mt-4 pt-1">
                             <NavLink to={'/articles/' + post.slug}>
-                                <h5>{post.title}</h5>
+                                <h5 className="link-color fw-bolder">{post.title}</h5>
                             </NavLink>
                             <p>{post.middleText}</p>
                         </div>
@@ -30,7 +30,7 @@ function Posts({ posts, loading }) {
                         <div className="row">
                             <div className="col m-3 mt-4 ps-5 pt-1">
                                 <NavLink to={'/articles/' + post.slug}>
-                                    <h5>{post.title}</h5>
+                                    <h5 className="link-color fw-bolder">{post.title}</h5>
                                 </NavLink>
                                 <p>{post.middleText}</p>
                             </div>

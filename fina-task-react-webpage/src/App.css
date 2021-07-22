@@ -39,3 +39,12 @@
 .icon:hover {
     color: rgb(252,230,52);
 }
+
+.link-color {
+    color: black !important;
+    text-decoration: none !important; 
+}
+
+a {
+    text-decoration: none !important;
+}

@@ -10,15 +10,17 @@ function Home() {
     const articleCards = mostRecentArticles.map((article, index) => {
         return (
             <div className="col" key={index}>
-                <div className="card mb-3" style={{ backgroundColor: 'ivory' }}>
+                <div className="card mb-3">
                     <div className="row g-0">
                         <div className="col-md-4">
+                        <NavLink to={'/articles/' + article.slug}>
                             <img src={article.image} className="img-fluid rounded-start" alt="..." />
+                        </NavLink>
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
                                 <h6 className="card-title">
-                                    <NavLink to={'/articles/' + article.slug}>
+                                    <NavLink className="link-color fw-bolder" to={'/articles/' + article.slug}>
                                         {article.title}
                                     </NavLink>
                                 </h6>
@@ -37,7 +39,7 @@ function Home() {
                 <div className="col-3 text-center mt-5">
                     <div className="row">
                         <div className="col">
-                            <h4>Greg Dunn Neuro Art</h4>
+                            <h4 className="fw-bold">Greg Dunn Neuro Art</h4>
                         </div>
                     </div>
                     <div className="row">
