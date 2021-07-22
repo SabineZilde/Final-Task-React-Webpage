@@ -76,7 +76,7 @@ function Article() {
                 </div>
             </div>
             <div className="row mx-5">
-                <div className="col-4 mb-5">
+                <div className="col-md-4 mb-5">
                     <img src={largeImage} className="img-fluid" alt=" Loading..." />
                     <SRLWrapper>
                         <div className="row px-1">

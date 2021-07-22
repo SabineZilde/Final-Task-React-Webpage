@@ -36,7 +36,7 @@ function Home() {
     return (
         <div className="container-fluid">
             <div className="row" style={{ backgroundColor: 'darkorange' }}>
-                <div className="col-3 text-center mt-5">
+                <div className="col-md-3 text-center mt-5">
                     <div className="row">
                         <div className="col">
                             <h4 className="fw-bold">Greg Dunn Neuro Art</h4>
@@ -48,7 +48,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="col-9 p-0">
+                <div className="col-md-9 p-0">
                     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active">

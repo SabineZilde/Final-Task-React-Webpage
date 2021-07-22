@@ -12,12 +12,12 @@ function Posts({ posts, loading }) {
             {posts.map((post) => {
                 return posts.indexOf(post) % 2 === 0 ? (<li key={post.id} className="bkg-gradient-orange" >
                     <div className="row">
-                        <div className="col-3">
+                        <div className="col-md-3">
                             <NavLink to={'/articles/' + post.slug}>
                                 <img src={post.images.forArticles} alt="..." className="img-fluid" />
                             </NavLink>
                         </div>
-                        <div className="col m-3 mt-4 pt-1">
+                        <div className="col m-md-3 mt-4 pt-1">
                             <NavLink to={'/articles/' + post.slug}>
                                 <h5 className="link-color fw-bolder">{post.title}</h5>
                             </NavLink>
@@ -34,7 +34,7 @@ function Posts({ posts, loading }) {
                                 </NavLink>
                                 <p>{post.middleText}</p>
                             </div>
-                            <div className="col-3">
+                            <div className="col-md-3">
                                 <NavLink to={'/articles/' + post.slug}>
                                     <img src={post.images.forArticles} alt="..." className="img-fluid" />
                                 </NavLink>
