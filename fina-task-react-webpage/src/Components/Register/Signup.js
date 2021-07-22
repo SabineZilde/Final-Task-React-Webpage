@@ -10,7 +10,8 @@ function Signup({ submitForm }) {
     return (
         <div className="form-content-right">
             <form className="form" onSubmit={handleSubmit}>
-                <h1>Get started with us today! Create your account by filling out the information below.</h1>
+                <h1>Get started with us today!</h1> 
+                <h2>Create your account by filling out the information below.</h2>
                 <div className="form-inputs">
                     <label className="form-label">
                         Username

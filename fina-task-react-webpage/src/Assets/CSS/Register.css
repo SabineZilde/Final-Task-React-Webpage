@@ -6,6 +6,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.form-container-login {
+    margin: auto auto;
+    position: relative;
+    border-radius: 10px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 .form-content-left {
     background: linear-gradient( 90deg, rgb(39, 176, 255) 0%, rgb(0, 232, 236) 100%);
@@ -54,8 +62,15 @@
 }
 
 .form h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.form h2 {
     font-size: 1rem;
-    text-align: start;
+    text-align: center;
     width: 80%;
     margin-bottom: 1rem;
     color: #fff;

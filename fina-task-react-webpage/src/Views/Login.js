@@ -31,7 +31,7 @@ function Login() {
             </div>
             <div className="row mt-3 mb-5">
                 <div className="col p-0">
-                    <div className="form-container">
+                    <div className="form-container-login">
                         <div className="form-content-left">
                             <img src={logo} alt="Fox logo" className="form-img" />
                         </div>
