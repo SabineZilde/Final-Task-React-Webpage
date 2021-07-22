@@ -11,7 +11,7 @@ const articles = [
     {
         title: 'Peggy Collins Cat Art',
         image: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/maine-coon-cat-peggy-collins.jpg',
-        shortText: 'I am a digital artist and nature photographer. My passion is creating cat portraits. Cats rule the earth, you know they do!',
+        shortText: 'I am a digital artist. My passion is creating cat portraits. Cats rule the earth, you know they do!',
         text: 'I am a digital artist and nature photographer living on the coast of Vancouver Island in British Columbia, Canada. I\'m surrounded by the ocean, forests, mountains, and abundant wildlife, and these things bring me joy that I hope finds its way into my images. When you view my work, my wish is that you feel a sense of intimacy that deepens your own connection to nature. Aside from photography, one of my passions is creating portraits of cats, dogs, and other animals. I also have growing collections of abstract landscapes, trees, flowers, and musical instruments. I enjoy creating collages using vintage ephemera from the late 1800\'s and early 1900\'s. These collages are often quite whimsical in nature. Please feel free to browse through my collections and if there is something you like, you\'ll find that purchasing is a very simple process. We print on museum quality photo paper, canvas, acrylic board, and metal, and there is a large selection of framing options from which to choose. I encourage all viewers and buyers to give me feedback via email. All purchases have a 30-day money-back guarantee in the unlikely event that you are not 100% satisfied.',
         slug: 'peggy-collins-cat-art',
         id: 2,
