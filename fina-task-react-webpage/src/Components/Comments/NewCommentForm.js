@@ -1,11 +1,13 @@
 import { useState } from "react";
 import '../../Assets/CSS/Comments.css';
 import Axios from 'axios';
+import { format } from "date-fns";
 
 function NewCommentForm({ reloadCommentsList }) {
     const [saving, setSaving] = useState(false);
     const [newUsername, setNewUsername] = useState('');
     const [newMessage, setNewMessage] = useState('');
+    const [time] = useState(format(new Date(), "dd.MM.yyyy HH:mm"));
     const [usernameWarning, setUsernameWarning] = useState('');
     const [messageWarning, setMessageWarning] = useState('');
 
@@ -26,7 +28,7 @@ function NewCommentForm({ reloadCommentsList }) {
         const url = 'http://localhost:8082/comments';
         const data = {
             username: newUsername,
-            time: 'test',
+            time: time,
             comment: newMessage,
         };
 
