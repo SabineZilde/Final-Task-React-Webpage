@@ -2,7 +2,7 @@ import { useState } from "react";
 import '../../Assets/CSS/Comments.css';
 import Axios from 'axios';
 
-function NewCommentForm() {
+function NewCommentForm({ reloadCommentsList }) {
     const [saving, setSaving] = useState(false);
     const [newUsername, setNewUsername] = useState('');
     const [newMessage, setNewMessage] = useState('');
@@ -12,7 +12,7 @@ function NewCommentForm() {
     const updateUsername = e => setNewUsername(e.target.value);
     const updateNewMessage = e => setNewMessage(e.target.value);
 
-    const createNewComment = () => {
+    const createNewComment = async () => {
         if (newUsername === '' || newMessage === '') {
             setUsernameWarning(<div className="warning">Username required</div>);
             setMessageWarning(<div className="warning">Message required</div>);
@@ -26,20 +26,20 @@ function NewCommentForm() {
         const url = 'http://localhost:8082/comments';
         const data = {
             username: newUsername,
+            time: 'test',
             comment: newMessage,
         };
 
-        Axios
-            .post(url, data)
-            .then(() => {
-                setSaving(false);
-                setNewUsername('');
-                setNewMessage('');
-            })
-            .catch(() => {
-                alert('Somethig went wrong when talikng to the server')
-                setSaving(false);
-            });
+        try {
+            await Axios.post(url, data);
+            setSaving(false);
+            setNewUsername('');
+            setNewMessage('');
+            reloadCommentsList();
+        } catch (e) {
+            alert('Somethig went wrong when talikng to the server');
+            setSaving(false);
+        };
     };
 
     let usernameInputField = <input type="text" value={newUsername} className="form-control" onChange={updateUsername} placeholder="Enter your username" />

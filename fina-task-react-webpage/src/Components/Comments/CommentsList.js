@@ -1,30 +1,45 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
-import Comment from './Comment'; 
+import Comment from './Comment';
 
-function CommentsList() {
+function CommentsList({ counter, reloadCounter }) {
     const [comments, setComments] = useState({
         loading: true,
         items: [],
     });
 
-
-
-    useEffect(() => {
-        setInterval(() => {
+    const loadComments = async () => {
+        setComments({
+            loading: true,
+            items: [],
+        });
+        try {
+            const url = 'http://localhost:8082/comments';
+            const response = await axios.get(url);
             setComments({
                 loading: false,
-                items: [
-                    { _id: '111', username: 'Philips', time: '20.7.2021 19:52', comment: 'This page is awesome. I Laughed. I Cried. It Changed My Life.' },
-                    { _id: '222', username: 'Zaķis', time: '20.7.2021 20:04', comment: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore nemo cupiditate, animi praesentium labore deleniti iste natus harum similique porro ad neque reprehenderit culpa reiciendis veritatis aliquam non dolorum quisquam?' },
-                    { _id: '333', username: 'Ruksis', time: '21.7.2021 12:12', comment: 'random text' },
-                ]
+                items: response.data,
             });
-        }, 2000);
-    }, []);
+        } catch (e) {
+            alert('Something went wrong2');
+            setComments({
+                loading: false,
+                items: [],
+            });
+        };
+    };
+
+    useEffect(() => {
+        loadComments();
+    }, [counter]); //whenever the counter is updated, the page will be rerendered and commentlist updated
 
     let content = <h5>Loading...</h5>
-    if (!comments.loading) {
-        const commentElements = comments.items.map((comment, index) => <Comment comment={comment} key={index} />);
+    if (!comments.loading && comments.items.length === 0) {
+        content = <h5>No comments added yet</h5>
+    } else if (!comments.loading) {
+        const commentElements = comments.items.map(( comment, index) => {
+            return <Comment comment={comment} key={index} reloadCounter={reloadCounter} />
+        });
 
         content = (
             <ul className="list-group">

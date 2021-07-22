@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import Breadcrumbs from '../Components/Breadcrumbs';
 import CommentsList from '../Components/Comments/CommentsList';
 import NewCommentForm from '../Components/Comments/NewCommentForm';
 
 function Comments() {
+    const [counter, setCounter] = useState(0);
+
+    const reloadCommentsList = () => {
+        setCounter(counter + 1);
+    };
+
     const bredcrumbPaths = [
         { link: '/', title: 'Home' },
         { title: 'Comments' },
@@ -24,11 +31,10 @@ function Comments() {
                 <div className="col-8 my-5 offset-2" style={{ backgroundColor: 'white', borderRadius: '5px 5px' }}>
                     <div className="row p-3">
                         <div className="col">
-                            <CommentsList />
+                            <CommentsList reloadCommentsList={reloadCommentsList} counter={counter} />
                         </div>
                     </div>
-                    
-                    <NewCommentForm />
+                    <NewCommentForm reloadCommentsList={reloadCommentsList}/>
                 </div>
 
             </div>
